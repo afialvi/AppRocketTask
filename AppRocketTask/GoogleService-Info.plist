@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>154404850132-cd1fvitfgu12go51g73muc205u0s64jj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.154404850132-cd1fvitfgu12go51g73muc205u0s64jj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBPd_349SohYl0JtGQCM1Z4zT5dk5acLgk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>154404850132</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ios.approcket.AppRocketTask</string>
+	<key>PROJECT_ID</key>
+	<string>approckettask</string>
+	<key>STORAGE_BUCKET</key>
+	<string>approckettask.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:154404850132:ios:25e889894a11f6a3e2ae41</string>
+	<key>DATABASE_URL</key>
+	<string>https://approckettask.firebaseio.com</string>
+</dict>
+</plist>

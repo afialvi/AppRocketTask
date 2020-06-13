@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="AppRocketTask" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yru-zZ-6hQ">
+                    <rect key="frame" x="30" y="398" width="354" height="30"/>
+                    <state key="normal" title="Login"/>
+                    <connections>
+                        <action selector="login:" destination="-1" eventType="touchUpInside" id="JP6-Lv-gMQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4X-2W-CBS">
+                    <rect key="frame" x="30" y="448" width="354" height="30"/>
+                    <state key="normal" title="Signup"/>
+                    <connections>
+                        <action selector="signup:" destination="-1" eventType="touchUpInside" id="r3G-Nz-CnU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="E4X-2W-CBS" firstAttribute="top" secondItem="yru-zZ-6hQ" secondAttribute="bottom" constant="20" id="3Yy-4C-5AK"/>
+                <constraint firstItem="yru-zZ-6hQ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-40" id="4qa-WK-qMM"/>
+                <constraint firstItem="E4X-2W-CBS" firstAttribute="leading" secondItem="yru-zZ-6hQ" secondAttribute="leading" id="6zC-dq-Fi0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yru-zZ-6hQ" secondAttribute="trailing" constant="30" id="CAy-Ft-2pJ"/>
+                <constraint firstItem="E4X-2W-CBS" firstAttribute="trailing" secondItem="yru-zZ-6hQ" secondAttribute="trailing" id="Hgg-Sd-BTe"/>
+                <constraint firstItem="yru-zZ-6hQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="egE-5u-qdV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="117"/>
+        </view>
+    </objects>
+</document>

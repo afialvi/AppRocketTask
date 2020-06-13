@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupViewController" customModule="AppRocketTask" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTF" destination="A2b-my-6Zx" id="psn-cF-rXL"/>
+                <outlet property="passwordTF" destination="awC-of-pmP" id="bqw-kJ-HM6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4y-9d-hew">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2b-my-6Zx">
+                            <rect key="frame" x="20" y="374" width="374" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awC-of-pmP">
+                            <rect key="frame" x="20" y="438" width="374" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8e-AS-Gd4">
+                            <rect key="frame" x="317" y="497" width="77" height="30"/>
+                            <state key="normal" title="Sign me up"/>
+                            <connections>
+                                <action selector="signup:" destination="-1" eventType="touchUpInside" id="I9R-mo-Ijc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="R8e-AS-Gd4" firstAttribute="top" secondItem="awC-of-pmP" secondAttribute="bottom" constant="25" id="8lW-YB-7ui"/>
+                        <constraint firstItem="awC-of-pmP" firstAttribute="leading" secondItem="A2b-my-6Zx" secondAttribute="leading" id="TmM-Fs-8dI"/>
+                        <constraint firstAttribute="trailing" secondItem="A2b-my-6Zx" secondAttribute="trailing" constant="20" id="UdI-zN-06w"/>
+                        <constraint firstAttribute="trailing" secondItem="R8e-AS-Gd4" secondAttribute="trailing" constant="20" id="ajv-bB-irL"/>
+                        <constraint firstItem="A2b-my-6Zx" firstAttribute="centerY" secondItem="x4y-9d-hew" secondAttribute="centerY" constant="-40" id="hXZ-qB-EdI"/>
+                        <constraint firstItem="awC-of-pmP" firstAttribute="top" secondItem="A2b-my-6Zx" secondAttribute="bottom" constant="30" id="lDo-YO-HAN"/>
+                        <constraint firstItem="awC-of-pmP" firstAttribute="trailing" secondItem="A2b-my-6Zx" secondAttribute="trailing" id="rel-o8-wNi"/>
+                        <constraint firstItem="A2b-my-6Zx" firstAttribute="leading" secondItem="x4y-9d-hew" secondAttribute="leading" constant="20" id="xU0-LA-aIf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="x4y-9d-hew" secondAttribute="bottom" id="9mk-Uv-LYr"/>
+                <constraint firstItem="x4y-9d-hew" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YyJ-Y0-dSO"/>
+                <constraint firstItem="x4y-9d-hew" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fdi-EJ-N3i"/>
+                <constraint firstItem="x4y-9d-hew" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xCB-em-P1D"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="117"/>
+        </view>
+    </objects>
+</document>
