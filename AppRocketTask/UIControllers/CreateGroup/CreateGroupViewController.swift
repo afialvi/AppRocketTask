@@ -1,5 +1,5 @@
 //
-//  AllUsersViewController.swift
+//  CreateGroupViewController.swift
 //  AppRocketTask
 //
 //  Created by Muhammad Alvi on 14/06/2020.
@@ -12,71 +12,92 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
 
-class AllUsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+
+class CreateGroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var allUsersTableView: UITableView!
-    
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var groupNameTF: UITextField!
+    var dbRef : DatabaseReference?
+    var allGroups = [[String: Any]]()
     var allUsers = [AppRocketUser]()
-    var usersSearched = [AppRocketUser]()
-    var userSearchText = ""
     let CELL_REUSE_IDENTIFIER = "AllUsersTableViewCell"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initializeDBRef()
+        self.loadAllGroups()
         self.registerCellNibsForTableView()
         self.allUsersTableView.delegate = self
         self.allUsersTableView.dataSource = self
-        self.searchBar.delegate = self
         self.fetchAllUsers()
-        
-        // Do any additional setup after loading the view.
-        
     }
 
+    func initializeDBRef(){
+        self.dbRef = Database.database().reference()
+    }
+    func loadAllGroups(){
+        self.dbRef?.child("Groups").observe(.value, with: { (snapshot) in
+                   if(snapshot.exists()){
+                        if let userData = snapshot.value as? [[String: String]]{
+                               self.allGroups.removeAll()
+                               for grp in userData{
+                                   var grpDict = [String: Any]()
+                                   for(key, value) in grp {
+                                        print("Key: \(key), Value: \(value)")
+                                        grpDict[key] = value
+                                    }
+                                    self.allGroups.append(grpDict)
+                               }
+                                           
+                       }
+                   }
+                   else{
+                       
+                   }
+               })
+    }
+    
+    @IBAction func createGroup(_ sender: Any) {
+        var groupExists = false
+        for grp in self.allGroups{
+            if self.groupNameTF.text! == (grp["name"] as! String){
+                groupExists = true
+            }
+        }
+        if(groupExists){
+            
+        }
+        else{
+            var participants = [String]()
+            if let selectedPeopleIPs = self.allUsersTableView.indexPathsForSelectedRows{
+                for ip in selectedPeopleIPs{
+                    participants.append(self.allUsers[ip.row].username!)
+                }
+            }
+            self.allGroups.append(["name": self.groupNameTF.text!, "participants":participants])
+            self.dbRef?.child("Groups").setValue(self.allGroups)
+        }
+    }
+    
+    
+    
     func registerCellNibsForTableView(){
         let nib = UINib(nibName: "AllUsersTableViewCell", bundle: nil)
         self.allUsersTableView.register(nib, forCellReuseIdentifier: self.CELL_REUSE_IDENTIFIER)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.userSearchText.count > 0 ? self.usersSearched.count : self.allUsers.count
+        self.allUsers.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.CELL_REUSE_IDENTIFIER, for: indexPath) as! AllUsersTableViewCell
-        if(self.userSearchText.count > 0){
-             cell.updateCell(user: self.usersSearched[indexPath.row])
-        }
-        else{
-            cell.updateCell(user: self.allUsers[indexPath.row])
-        }
+       
+        cell.updateCell(user: self.allUsers[indexPath.row])
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let chatVC = ChatViewController()
-        if self.userSearchText.count > 0{
-            chatVC.receiverUsername = self.usersSearched[indexPath.row].username!
-        }
-        else{
-            chatVC.receiverUsername = self.allUsers[indexPath.row].username!
-        }
-        self.present(chatVC, animated: false, completion: nil)
-    }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
-        self.usersSearched = [AppRocketUser]()
-        self.userSearchText = searchText
-            for usr in allUsers{
-                if (usr.username?.contains(searchText))!{
-                    self.usersSearched.append(usr)
-                }
-            }
-            self.allUsersTableView.reloadData()
-    
-    }
-    
-    
-    
+   
     func fetchAllUsers(){
          let ref = Database.database().reference()
                 ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in // snapshot of users database
@@ -109,9 +130,5 @@ class AllUsersViewController: UIViewController, UITableViewDelegate, UITableView
                    
                 })
     }
-    @IBAction func createNewGroup(_ sender: Any) {
-        let cng = CreateGroupViewController()
-        self.present(cng, animated: false, completion: nil)
-    }
-    
+
 }

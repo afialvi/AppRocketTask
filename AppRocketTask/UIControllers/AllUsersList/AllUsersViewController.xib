@@ -46,6 +46,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbq-da-e4b">
                             <rect key="frame" x="25" y="5" width="116" height="30"/>
                             <state key="normal" title="Add a new group"/>
+                            <connections>
+                                <action selector="createNewGroup:" destination="-1" eventType="touchUpInside" id="Xew-o2-Gbo"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZP-Ly-6Q0">
                             <rect key="frame" x="280" y="5" width="109" height="30"/>

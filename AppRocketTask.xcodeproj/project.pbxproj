@@ -31,6 +31,8 @@
 		63DDB8CF24956C8700271C34 /* AllUsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB8CD24956C8700271C34 /* AllUsersViewController.xib */; };
 		63DDB8D424956CDE00271C34 /* AllUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8D224956CDE00271C34 /* AllUsersTableViewCell.swift */; };
 		63DDB8D524956CDE00271C34 /* AllUsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB8D324956CDE00271C34 /* AllUsersTableViewCell.xib */; };
+		63DDB8D92496130400271C34 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8D72496130400271C34 /* CreateGroupViewController.swift */; };
+		63DDB8DA2496130400271C34 /* CreateGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB8D82496130400271C34 /* CreateGroupViewController.xib */; };
 		75584B6F6EEF5E62C29E3B56 /* Pods_AppRocketTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB98BAADF4C2237CE7915A37 /* Pods_AppRocketTaskUITests.framework */; };
 		CBE9F77E38665FC4C505B9C3 /* Pods_AppRocketTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7FCD30E072C96D6DFBDF77 /* Pods_AppRocketTaskTests.framework */; };
 		F7284B5F0EFAA8548C3B3EB0 /* Pods_AppRocketTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1D48A64824598C56BE20B5 /* Pods_AppRocketTask.framework */; };
@@ -89,6 +91,8 @@
 		63DDB8CD24956C8700271C34 /* AllUsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllUsersViewController.xib; sourceTree = "<group>"; };
 		63DDB8D224956CDE00271C34 /* AllUsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllUsersTableViewCell.swift; sourceTree = "<group>"; };
 		63DDB8D324956CDE00271C34 /* AllUsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllUsersTableViewCell.xib; sourceTree = "<group>"; };
+		63DDB8D72496130400271C34 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		63DDB8D82496130400271C34 /* CreateGroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateGroupViewController.xib; sourceTree = "<group>"; };
 		7A1D48A64824598C56BE20B5 /* Pods_AppRocketTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRocketTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB98BAADF4C2237CE7915A37 /* Pods_AppRocketTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRocketTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D693D1C6C8F54B4176475508 /* Pods-AppRocketTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRocketTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-AppRocketTaskTests/Pods-AppRocketTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		63DDB8AB2493DF5E00271C34 /* UIControllers */ = {
 			isa = PBXGroup;
 			children = (
+				63DDB8D6249612CF00271C34 /* CreateGroup */,
 				63DDB8CB24956C5200271C34 /* ChatList */,
 				63DDB8D024956C9200271C34 /* AllUsersList */,
 				63DDB8B624941B8F00271C34 /* Main */,
@@ -273,6 +278,15 @@
 				63DDB8D324956CDE00271C34 /* AllUsersTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		63DDB8D6249612CF00271C34 /* CreateGroup */ = {
+			isa = PBXGroup;
+			children = (
+				63DDB8D72496130400271C34 /* CreateGroupViewController.swift */,
+				63DDB8D82496130400271C34 /* CreateGroupViewController.xib */,
+			);
+			path = CreateGroup;
 			sourceTree = "<group>";
 		};
 		9BE4093ABE8E05FA36CD05B6 /* Pods */ = {
@@ -406,6 +420,7 @@
 				63DDB8D524956CDE00271C34 /* AllUsersTableViewCell.xib in Resources */,
 				63DDB8BC2494201200271C34 /* Podfile in Resources */,
 				63DDB8822493DD4E00271C34 /* Assets.xcassets in Resources */,
+				63DDB8DA2496130400271C34 /* CreateGroupViewController.xib in Resources */,
 				63DDB8CA24956C4300271C34 /* ChatListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +534,7 @@
 			files = (
 				63DDB8AE2493E06900271C34 /* LoginViewController.swift in Sources */,
 				63DDB8792493DD4A00271C34 /* AppDelegate.swift in Sources */,
+				63DDB8D92496130400271C34 /* CreateGroupViewController.swift in Sources */,
 				63DDB8B42493E09100271C34 /* SignupViewController.swift in Sources */,
 				63DDB8D424956CDE00271C34 /* AllUsersTableViewCell.swift in Sources */,
 				63DDB8BF2494222A00271C34 /* ChatViewController.swift in Sources */,
