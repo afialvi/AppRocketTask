@@ -12,12 +12,14 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
 
-class AllUsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AllUsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var allUsersTableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     var allUsers = [AppRocketUser]()
-    
+    var usersSearched = [AppRocketUser]()
+    var userSearchText = ""
     let CELL_REUSE_IDENTIFIER = "AllUsersTableViewCell"
     
     override func viewDidLoad() {
@@ -25,7 +27,9 @@ class AllUsersViewController: UIViewController, UITableViewDelegate, UITableView
         self.registerCellNibsForTableView()
         self.allUsersTableView.delegate = self
         self.allUsersTableView.dataSource = self
+        self.searchBar.delegate = self
         self.fetchAllUsers()
+        
         // Do any additional setup after loading the view.
         
     }
@@ -36,13 +40,41 @@ class AllUsersViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.allUsers.count
+        return self.userSearchText.count > 0 ? self.usersSearched.count : self.allUsers.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.CELL_REUSE_IDENTIFIER, for: indexPath) as! AllUsersTableViewCell
-        cell.updateCell(user: self.allUsers[indexPath.row])
+        if(self.userSearchText.count > 0){
+             cell.updateCell(user: self.usersSearched[indexPath.row])
+        }
+        else{
+            cell.updateCell(user: self.allUsers[indexPath.row])
+        }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let chatVC = ChatViewController()
+        if self.userSearchText.count > 0{
+            chatVC.receiverUsername = self.usersSearched[indexPath.row].username!
+        }
+        else{
+            chatVC.receiverUsername = self.allUsers[indexPath.row].username!
+        }
+        self.present(chatVC, animated: false, completion: nil)
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        self.usersSearched = [AppRocketUser]()
+        self.userSearchText = searchText
+            for usr in allUsers{
+                if (usr.username?.contains(searchText))!{
+                    self.usersSearched.append(usr)
+                }
+            }
+            self.allUsersTableView.reloadData()
+    
+    }
+    
     
     
     func fetchAllUsers(){

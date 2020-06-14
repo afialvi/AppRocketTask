@@ -16,46 +16,132 @@ class ChatViewController: UIViewController {
 
     var users = [AppRocketUser]()
     var dict:NSDictionary!
+    var receiverUsername: String = ""
     let arrMsg = NSMutableArray()
+    var dbRef: DatabaseReference?
+    var chatKeyStr = ""
+    var messages = [[String: String]]()
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Chat View Controller Loaded!!")
-        self.updateChatUsers()
-        for usr in self.users{
-            print("User: \(usr.username!)")
-        }
+        
+        self.initializeDBRef()
+        self.initializeChats()
+
     }
     
-    func initialization(){
-        let database = Database.database().reference()
-        database.child("Chats").child(Auth.auth().currentUser!.uid).child("\(String(describing: dict.object(forKey: "firebaseId")!))").observe(.childAdded) { (snapshot) in
-            
-            let components = snapshot.key.components(separatedBy: "_")
-            let dictMsg = NSMutableDictionary()
-            dictMsg.setObject(components[1], forKey: "SenderId" as NSCopying)
-            dictMsg.setObject(components[2], forKey: "ReceiverId" as NSCopying)
-            dictMsg.setObject(snapshot.value!, forKey: "Message" as NSCopying)
-    
-        }
+    func initializeDBRef(){
+        self.dbRef = Database.database().reference()
     }
+ 
     
-    func updateChatUsers(){
+    func initializeChats(){
        
-         
-        }
+        let key1 = (((Auth.auth().currentUser?.email!)!) + self.receiverUsername).replacingOccurrences(of: ".", with: "").replacingOccurrences(of: "@", with: "")
+        let key2 = (self.receiverUsername + (Auth.auth().currentUser?.email!)!).replacingOccurrences(of: ".", with: "").replacingOccurrences(of: "@", with: "")
+
+        self.dbRef?.child("Chats").child(key1).observeSingleEvent(of: .value, with: { (snapshot) in
+            if(snapshot.exists()){
+                print("Chats key1 exist")
+                self.chatKeyStr = key1
+                self.addChatObservers()
+                self.loadChats()
+            }
+            else{
+                print("Chats key1 do not exist")
+                
+                self.dbRef?.child("Chats").child(key2).observeSingleEvent(of: .value, with: { (snapshot2) in
+                    
+                    if(snapshot2.exists()){
+                        print("Chats key2 exist")
+                        self.chatKeyStr = key2
+                        self.addChatObservers()
+                        self.loadChats()
+                    }
+                    else{
+                        print("Chats key2 do not exist")
+                        self.chatKeyStr = key1
+                        self.addChatObservers()
+//                        self.addChatMessage(message: "Hello")
+//                        let timer = Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { (tmer) in
+//                            self.addChatMessage(message: "Helloxx")
+//                        }
+                    }
+                
+                
+                })
+                
+                
+            }
+        })
+    }
+    
+     
+    
+
+    
+    
+    func loadChats(){
+        self.dbRef?.child("Chats").child(self.chatKeyStr).observeSingleEvent(of: .value, with: { (snapshot) in
+            if(snapshot.exists()){
+                print("Chats loaded!!")
+                if let userData = snapshot.value as? [[String: String]]
+                {
+                        self.messages.removeAll()
+                    for mseg in userData{
+                    for(key, value) in mseg {
+                            print("Key: \(key), Value: \(value)")
+                            self.messages.append([key: "\(value)"])
+                        }
+                    
+                    }
+                    
+//                    let timer = Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { (tmer) in
+//                        self.addChatMessage(message: "Helloxx")
+//                    }
+                }
+                else{
+                    print("\(snapshot.value)")
+                }
+            }
+            else{
+                print("Chats cannot be loaded!!")
+            }
+        })
+        
+    }
+    
+
+    func addChatObservers(){
+        self.dbRef?.child("Chats").child(self.chatKeyStr).observe(.childAdded, with: { (snapshot) in
+            if(snapshot.exists()){
+                print("Observer successful!!")
+                if let userData = snapshot.value as? Dictionary<String,AnyObject>
+                {
+                        for(key, value) in userData {
+                            print("Key: \(key), Value: \(value)")
+                        }
+                }
+                
+            }
+            else{
+                print("Observer not successful!!")
+            }
+        })
+    }
+    
+    
+    func addChatMessage(message: String){
+        print("Adding Chat message!!")
+        var msgKey = self.getCurrentTimeStamp().replacingOccurrences(of: ".", with: "")
+        msgKey = msgKey + "_" + "sender_" + ((Auth.auth().currentUser?.email!)!).replacingOccurrences(of: ".", with: "").replacingOccurrences(of: "@", with: "")
+        msgKey = msgKey + "_" + "receiver_" + self.receiverUsername.replacingOccurrences(of: ".", with: "").replacingOccurrences(of: "@", with: "")
+        self.messages.append([msgKey: message])
+        self.dbRef?.child("Chats").child(self.chatKeyStr).setValue(self.messages)
+    }
     
     func getCurrentTimeStamp() -> String {
                return "\(Double(NSDate().timeIntervalSince1970 * 1000))"
-    }
-    
-    func sendMsg(textMsg: String){
-        let database = Database.database().reference()
-        let str =  "\(String(describing: self.getCurrentTimeStamp().replacingOccurrences(of: ".", with: "")))" + "_" + "\(String(describing: Auth.auth().currentUser!.uid))" + "_" + "\(String(describing: dict.object(forKey: "firebaseId")!))"
-        
-        database.child("Chats").child("\(String(describing: dict.object(forKey: "firebaseId")!))").child(Auth.auth().currentUser!.uid).updateChildValues([str : textMsg])
-        
-        database.child("Chats").child(Auth.auth().currentUser!.uid).child("\(String(describing: dict.object(forKey: "firebaseId")!))").updateChildValues([str : textMsg])
-        
     }
     
     
