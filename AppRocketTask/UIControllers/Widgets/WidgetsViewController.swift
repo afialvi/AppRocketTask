@@ -234,7 +234,7 @@ class WidgetsViewController: UIViewController, CLLocationManagerDelegate {
         var locationManager = CLLocationManager()
 
         locationManager.requestWhenInUseAuthorization()
-        var currentLoc: CLLocation?
+        var currentLoc: CLLocation!
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
         CLLocationManager.authorizationStatus() == .authorizedAlways) {
             locationManager.delegate = self
