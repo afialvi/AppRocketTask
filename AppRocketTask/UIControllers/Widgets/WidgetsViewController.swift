@@ -235,14 +235,14 @@ class WidgetsViewController: UIViewController, CLLocationManagerDelegate {
 
         locationManager.requestWhenInUseAuthorization()
         var currentLoc: CLLocation?
-//        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-//        CLLocationManager.authorizationStatus() == .authorizedAlways) {
-//            locationManager.delegate = self
-//            locationManager.startUpdatingLocation()
-//           currentLoc = locationManager.location
-//           print("Latitude: \(currentLoc.coordinate.latitude)")
-//           print("Longitude: \(currentLoc.coordinate.longitude)")
-//        }
+        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+        CLLocationManager.authorizationStatus() == .authorizedAlways) {
+            locationManager.delegate = self
+            locationManager.startUpdatingLocation()
+           currentLoc = locationManager.location
+           print("Latitude: \(currentLoc.coordinate.latitude)")
+           print("Longitude: \(currentLoc.coordinate.longitude)")
+        }
         return currentLoc
     }
     
