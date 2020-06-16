@@ -54,7 +54,7 @@ class AllUsersViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let chatVC = ChatViewController()
+        let chatVC = ChatViewController(chat: Chat())
         if self.userSearchText.count > 0{
             chatVC.receiverUsername = self.usersSearched[indexPath.row].username!
         }

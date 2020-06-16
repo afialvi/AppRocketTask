@@ -32,7 +32,7 @@ class SignupViewController: UIViewController {
        if error == nil {
         print("Success signed up user: \(user?.user.email)")
         self.ref?.child("users").child((user?.user.uid)!).setValue(["username": self.emailTF.text!])
-        self.present(AllUsersViewController(), animated: false, completion: nil)
+        self.present(WidgetsViewController(), animated: false, completion: nil)
         
         
        } else {

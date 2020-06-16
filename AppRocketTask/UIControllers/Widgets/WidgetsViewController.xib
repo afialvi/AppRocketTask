@@ -199,12 +199,22 @@
                                                 <action selector="viewInbox:" destination="-1" eventType="touchUpInside" id="rYI-EB-9o6"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-yd-nU2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
+                                            <connections>
+                                                <action selector="viewChat:" destination="-1" eventType="touchUpInside" id="MEk-WC-jcK"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
+                                        <constraint firstItem="cAg-yd-nU2" firstAttribute="top" secondItem="0VU-XR-pET" secondAttribute="top" id="BPP-PC-8W3"/>
                                         <constraint firstItem="Whj-PT-8bB" firstAttribute="leading" secondItem="0VU-XR-pET" secondAttribute="leading" constant="20" id="CHE-rY-L7z"/>
                                         <constraint firstAttribute="trailing" secondItem="cxD-dL-kXx" secondAttribute="trailing" constant="20" id="OIu-pa-AvD"/>
                                         <constraint firstItem="udw-7L-yrf" firstAttribute="leading" secondItem="Whj-PT-8bB" secondAttribute="leading" id="QHZ-jA-6rI"/>
+                                        <constraint firstAttribute="bottom" secondItem="cAg-yd-nU2" secondAttribute="bottom" constant="68" id="QcR-vw-TBt"/>
+                                        <constraint firstItem="cAg-yd-nU2" firstAttribute="leading" secondItem="0VU-XR-pET" secondAttribute="leading" id="XJ8-rJ-2WZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="cAg-yd-nU2" secondAttribute="trailing" id="XUF-Tg-Z8d"/>
                                         <constraint firstItem="udw-7L-yrf" firstAttribute="top" secondItem="Whj-PT-8bB" secondAttribute="bottom" constant="8" id="Xtr-0H-V65"/>
                                         <constraint firstAttribute="trailing" secondItem="udw-7L-yrf" secondAttribute="trailing" constant="20" id="Zl4-q8-qdg"/>
                                         <constraint firstAttribute="bottom" secondItem="cxD-dL-kXx" secondAttribute="bottom" constant="30" id="w12-kf-j0P"/>

@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../NOCProtoKit">
+   </FileRef>
+   <FileRef
+      location = "group:NOCProtoKit.podspec">
+   </FileRef>
+   <FileRef
       location = "group:AppRocketTask.xcodeproj">
    </FileRef>
    <FileRef

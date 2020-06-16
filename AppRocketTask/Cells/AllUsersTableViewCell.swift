@@ -26,4 +26,5 @@ class AllUsersTableViewCell: UITableViewCell {
         self.usernameLbl.text = user.username
     }
     
+    
 }

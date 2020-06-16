@@ -13,6 +13,10 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'Firebase/Database'
+pod 'NoChat', '~> 0.3'
+pod 'YYText'
+pod 'HPGrowingTextView'
+pod 'NOCProtoKit', :path => '../'
 
   target 'AppRocketTaskTests' do
     inherit! :search_paths

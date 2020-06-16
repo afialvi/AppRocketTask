@@ -37,6 +37,41 @@
 		63DDB8DF2496E64A00271C34 /* WidgetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB8DD2496E64A00271C34 /* WidgetsViewController.xib */; };
 		63DDB8E32496F2B500271C34 /* AllChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8E12496F2B500271C34 /* AllChatsViewController.swift */; };
 		63DDB8E42496F2B500271C34 /* AllChatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB8E22496F2B500271C34 /* AllChatsViewController.xib */; };
+		63DDB9112498E35B00271C34 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8EE2498E33A00271C34 /* Message.swift */; };
+		63DDB9122498E35B00271C34 /* MMBaseMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8EF2498E33B00271C34 /* MMBaseMessageCell.swift */; };
+		63DDB9132498E35B00271C34 /* UIFont+NoChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8F02498E33C00271C34 /* UIFont+NoChat.swift */; };
+		63DDB9142498E35B00271C34 /* MMDateMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8F12498E33D00271C34 /* MMDateMessageCellLayout.swift */; };
+		63DDB9152498E35B00271C34 /* TGChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8F22498E33E00271C34 /* TGChatViewController.swift */; };
+		63DDB9162498E35B00271C34 /* TGBaseMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8F32498E33F00271C34 /* TGBaseMessageCellLayout.swift */; };
+		63DDB9182498E35B00271C34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8F52498E34100271C34 /* User.swift */; };
+		63DDB9192498E35B00271C34 /* TGBaseMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8F62498E34200271C34 /* TGBaseMessageCell.swift */; };
+		63DDB91A2498E35B00271C34 /* notification.caf in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB8F72498E34300271C34 /* notification.caf */; };
+		63DDB91B2498E35B00271C34 /* TGTextMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8F82498E34400271C34 /* TGTextMessageCellLayout.swift */; };
+		63DDB91C2498E35B00271C34 /* MMChatInputTextPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8F92498E34500271C34 /* MMChatInputTextPanel.swift */; };
+		63DDB91D2498E35B00271C34 /* TGDateMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8FA2498E34600271C34 /* TGDateMessageCell.swift */; };
+		63DDB91E2498E35B00271C34 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8FB2498E34700271C34 /* MessageManager.swift */; };
+		63DDB91F2498E35B00271C34 /* NSAttributedString+NoChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8FC2498E34800271C34 /* NSAttributedString+NoChat.swift */; };
+		63DDB9202498E35B00271C34 /* MMTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8FD2498E34900271C34 /* MMTextMessageCell.swift */; };
+		63DDB9212498E35B00271C34 /* TGTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8FE2498E34A00271C34 /* TGTextMessageCell.swift */; };
+		63DDB9222498E35B00271C34 /* MMSystemMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB8FF2498E34B00271C34 /* MMSystemMessageCellLayout.swift */; };
+		63DDB9232498E35B00271C34 /* TGChatInputTextPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9002498E34C00271C34 /* TGChatInputTextPanel.swift */; };
+		63DDB9242498E35B00271C34 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9012498E34D00271C34 /* SoundManager.swift */; };
+		63DDB9252498E35B00271C34 /* MMSystemMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9022498E34E00271C34 /* MMSystemMessageCell.swift */; };
+		63DDB9262498E35B00271C34 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9032498E34E00271C34 /* Chat.swift */; };
+		63DDB9272498E35B00271C34 /* MMDateMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9042498E34F00271C34 /* MMDateMessageCell.swift */; };
+		63DDB9282498E35B00271C34 /* MMBaseMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9052498E35000271C34 /* MMBaseMessageCellLayout.swift */; };
+		63DDB9292498E35B00271C34 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9062498E35100271C34 /* ChatsViewController.swift */; };
+		63DDB92A2498E35B00271C34 /* TGDeliveryStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9072498E35200271C34 /* TGDeliveryStatusView.swift */; };
+		63DDB92B2498E35B00271C34 /* sent.caf in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB9082498E35300271C34 /* sent.caf */; };
+		63DDB92C2498E35B00271C34 /* TGDateMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB9092498E35300271C34 /* TGDateMessageCellLayout.swift */; };
+		63DDB92D2498E35B00271C34 /* TGAvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB90A2498E35400271C34 /* TGAvatarButton.swift */; };
+		63DDB92E2498E35B00271C34 /* TGSystemMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB90B2498E35500271C34 /* TGSystemMessageCell.swift */; };
+		63DDB92F2498E35B00271C34 /* TGSystemMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB90C2498E35600271C34 /* TGSystemMessageCellLayout.swift */; };
+		63DDB9302498E35B00271C34 /* TGTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB90D2498E35700271C34 /* TGTitleView.swift */; };
+		63DDB9312498E35B00271C34 /* MMTextMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB90E2498E35800271C34 /* MMTextMessageCellLayout.swift */; };
+		63DDB9322498E35B00271C34 /* TGClockProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB90F2498E35900271C34 /* TGClockProgressView.swift */; };
+		63DDB93C2498F8D200271C34 /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB93A2498F8D200271C34 /* ChatsTableViewCell.swift */; };
+		63DDB93D2498F8D200271C34 /* ChatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB93B2498F8D200271C34 /* ChatsTableViewCell.xib */; };
 		75584B6F6EEF5E62C29E3B56 /* Pods_AppRocketTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB98BAADF4C2237CE7915A37 /* Pods_AppRocketTaskUITests.framework */; };
 		CBE9F77E38665FC4C505B9C3 /* Pods_AppRocketTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7FCD30E072C96D6DFBDF77 /* Pods_AppRocketTaskTests.framework */; };
 		F7284B5F0EFAA8548C3B3EB0 /* Pods_AppRocketTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1D48A64824598C56BE20B5 /* Pods_AppRocketTask.framework */; };
@@ -101,6 +136,41 @@
 		63DDB8DD2496E64A00271C34 /* WidgetsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetsViewController.xib; sourceTree = "<group>"; };
 		63DDB8E12496F2B500271C34 /* AllChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChatsViewController.swift; sourceTree = "<group>"; };
 		63DDB8E22496F2B500271C34 /* AllChatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllChatsViewController.xib; sourceTree = "<group>"; };
+		63DDB8EE2498E33A00271C34 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		63DDB8EF2498E33B00271C34 /* MMBaseMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBaseMessageCell.swift; sourceTree = "<group>"; };
+		63DDB8F02498E33C00271C34 /* UIFont+NoChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+NoChat.swift"; sourceTree = "<group>"; };
+		63DDB8F12498E33D00271C34 /* MMDateMessageCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDateMessageCellLayout.swift; sourceTree = "<group>"; };
+		63DDB8F22498E33E00271C34 /* TGChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGChatViewController.swift; sourceTree = "<group>"; };
+		63DDB8F32498E33F00271C34 /* TGBaseMessageCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGBaseMessageCellLayout.swift; sourceTree = "<group>"; };
+		63DDB8F52498E34100271C34 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		63DDB8F62498E34200271C34 /* TGBaseMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGBaseMessageCell.swift; sourceTree = "<group>"; };
+		63DDB8F72498E34300271C34 /* notification.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notification.caf; sourceTree = "<group>"; };
+		63DDB8F82498E34400271C34 /* TGTextMessageCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTextMessageCellLayout.swift; sourceTree = "<group>"; };
+		63DDB8F92498E34500271C34 /* MMChatInputTextPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMChatInputTextPanel.swift; sourceTree = "<group>"; };
+		63DDB8FA2498E34600271C34 /* TGDateMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGDateMessageCell.swift; sourceTree = "<group>"; };
+		63DDB8FB2498E34700271C34 /* MessageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		63DDB8FC2498E34800271C34 /* NSAttributedString+NoChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+NoChat.swift"; sourceTree = "<group>"; };
+		63DDB8FD2498E34900271C34 /* MMTextMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTextMessageCell.swift; sourceTree = "<group>"; };
+		63DDB8FE2498E34A00271C34 /* TGTextMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTextMessageCell.swift; sourceTree = "<group>"; };
+		63DDB8FF2498E34B00271C34 /* MMSystemMessageCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSystemMessageCellLayout.swift; sourceTree = "<group>"; };
+		63DDB9002498E34C00271C34 /* TGChatInputTextPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGChatInputTextPanel.swift; sourceTree = "<group>"; };
+		63DDB9012498E34D00271C34 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		63DDB9022498E34E00271C34 /* MMSystemMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSystemMessageCell.swift; sourceTree = "<group>"; };
+		63DDB9032498E34E00271C34 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		63DDB9042498E34F00271C34 /* MMDateMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMDateMessageCell.swift; sourceTree = "<group>"; };
+		63DDB9052498E35000271C34 /* MMBaseMessageCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBaseMessageCellLayout.swift; sourceTree = "<group>"; };
+		63DDB9062498E35100271C34 /* ChatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		63DDB9072498E35200271C34 /* TGDeliveryStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGDeliveryStatusView.swift; sourceTree = "<group>"; };
+		63DDB9082498E35300271C34 /* sent.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sent.caf; sourceTree = "<group>"; };
+		63DDB9092498E35300271C34 /* TGDateMessageCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGDateMessageCellLayout.swift; sourceTree = "<group>"; };
+		63DDB90A2498E35400271C34 /* TGAvatarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGAvatarButton.swift; sourceTree = "<group>"; };
+		63DDB90B2498E35500271C34 /* TGSystemMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGSystemMessageCell.swift; sourceTree = "<group>"; };
+		63DDB90C2498E35600271C34 /* TGSystemMessageCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGSystemMessageCellLayout.swift; sourceTree = "<group>"; };
+		63DDB90D2498E35700271C34 /* TGTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTitleView.swift; sourceTree = "<group>"; };
+		63DDB90E2498E35800271C34 /* MMTextMessageCellLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTextMessageCellLayout.swift; sourceTree = "<group>"; };
+		63DDB90F2498E35900271C34 /* TGClockProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGClockProgressView.swift; sourceTree = "<group>"; };
+		63DDB93A2498F8D200271C34 /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
+		63DDB93B2498F8D200271C34 /* ChatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsTableViewCell.xib; sourceTree = "<group>"; };
 		7A1D48A64824598C56BE20B5 /* Pods_AppRocketTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRocketTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB98BAADF4C2237CE7915A37 /* Pods_AppRocketTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRocketTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D693D1C6C8F54B4176475508 /* Pods-AppRocketTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRocketTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-AppRocketTaskTests/Pods-AppRocketTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +241,7 @@
 		63DDB8772493DD4A00271C34 /* AppRocketTask */ = {
 			isa = PBXGroup;
 			children = (
+				63DDB8E52498E17B00271C34 /* ChatMessageLib */,
 				63DDB8D124956CBF00271C34 /* Cells */,
 				63DDB8C424943A6E00271C34 /* Models */,
 				63DDB8C224942B8600271C34 /* GoogleService-Info.plist */,
@@ -286,6 +357,8 @@
 			children = (
 				63DDB8D224956CDE00271C34 /* AllUsersTableViewCell.swift */,
 				63DDB8D324956CDE00271C34 /* AllUsersTableViewCell.xib */,
+				63DDB93A2498F8D200271C34 /* ChatsTableViewCell.swift */,
+				63DDB93B2498F8D200271C34 /* ChatsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -315,6 +388,46 @@
 				63DDB8E22496F2B500271C34 /* AllChatsViewController.xib */,
 			);
 			path = AllChats;
+			sourceTree = "<group>";
+		};
+		63DDB8E52498E17B00271C34 /* ChatMessageLib */ = {
+			isa = PBXGroup;
+			children = (
+				63DDB9032498E34E00271C34 /* Chat.swift */,
+				63DDB9062498E35100271C34 /* ChatsViewController.swift */,
+				63DDB8EE2498E33A00271C34 /* Message.swift */,
+				63DDB8FB2498E34700271C34 /* MessageManager.swift */,
+				63DDB8EF2498E33B00271C34 /* MMBaseMessageCell.swift */,
+				63DDB9052498E35000271C34 /* MMBaseMessageCellLayout.swift */,
+				63DDB8F92498E34500271C34 /* MMChatInputTextPanel.swift */,
+				63DDB9042498E34F00271C34 /* MMDateMessageCell.swift */,
+				63DDB8F12498E33D00271C34 /* MMDateMessageCellLayout.swift */,
+				63DDB9022498E34E00271C34 /* MMSystemMessageCell.swift */,
+				63DDB8FF2498E34B00271C34 /* MMSystemMessageCellLayout.swift */,
+				63DDB8FD2498E34900271C34 /* MMTextMessageCell.swift */,
+				63DDB90E2498E35800271C34 /* MMTextMessageCellLayout.swift */,
+				63DDB8F72498E34300271C34 /* notification.caf */,
+				63DDB8FC2498E34800271C34 /* NSAttributedString+NoChat.swift */,
+				63DDB9082498E35300271C34 /* sent.caf */,
+				63DDB9012498E34D00271C34 /* SoundManager.swift */,
+				63DDB90A2498E35400271C34 /* TGAvatarButton.swift */,
+				63DDB8F62498E34200271C34 /* TGBaseMessageCell.swift */,
+				63DDB8F32498E33F00271C34 /* TGBaseMessageCellLayout.swift */,
+				63DDB9002498E34C00271C34 /* TGChatInputTextPanel.swift */,
+				63DDB8F22498E33E00271C34 /* TGChatViewController.swift */,
+				63DDB90F2498E35900271C34 /* TGClockProgressView.swift */,
+				63DDB8FA2498E34600271C34 /* TGDateMessageCell.swift */,
+				63DDB9092498E35300271C34 /* TGDateMessageCellLayout.swift */,
+				63DDB9072498E35200271C34 /* TGDeliveryStatusView.swift */,
+				63DDB90B2498E35500271C34 /* TGSystemMessageCell.swift */,
+				63DDB90C2498E35600271C34 /* TGSystemMessageCellLayout.swift */,
+				63DDB8FE2498E34A00271C34 /* TGTextMessageCell.swift */,
+				63DDB8F82498E34400271C34 /* TGTextMessageCellLayout.swift */,
+				63DDB90D2498E35700271C34 /* TGTitleView.swift */,
+				63DDB8F02498E33C00271C34 /* UIFont+NoChat.swift */,
+				63DDB8F52498E34100271C34 /* User.swift */,
+			);
+			path = ChatMessageLib;
 			sourceTree = "<group>";
 		};
 		9BE4093ABE8E05FA36CD05B6 /* Pods */ = {
@@ -450,8 +563,11 @@
 				63DDB8BC2494201200271C34 /* Podfile in Resources */,
 				63DDB8822493DD4E00271C34 /* Assets.xcassets in Resources */,
 				63DDB8DA2496130400271C34 /* CreateGroupViewController.xib in Resources */,
+				63DDB92B2498E35B00271C34 /* sent.caf in Resources */,
 				63DDB8DF2496E64A00271C34 /* WidgetsViewController.xib in Resources */,
 				63DDB8CA24956C4300271C34 /* ChatListViewController.xib in Resources */,
+				63DDB93D2498F8D200271C34 /* ChatsTableViewCell.xib in Resources */,
+				63DDB91A2498E35B00271C34 /* notification.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,19 +679,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				63DDB8AE2493E06900271C34 /* LoginViewController.swift in Sources */,
+				63DDB91B2498E35B00271C34 /* TGTextMessageCellLayout.swift in Sources */,
+				63DDB9232498E35B00271C34 /* TGChatInputTextPanel.swift in Sources */,
 				63DDB8792493DD4A00271C34 /* AppDelegate.swift in Sources */,
 				63DDB8D92496130400271C34 /* CreateGroupViewController.swift in Sources */,
+				63DDB92E2498E35B00271C34 /* TGSystemMessageCell.swift in Sources */,
+				63DDB92D2498E35B00271C34 /* TGAvatarButton.swift in Sources */,
+				63DDB92C2498E35B00271C34 /* TGDateMessageCellLayout.swift in Sources */,
+				63DDB9192498E35B00271C34 /* TGBaseMessageCell.swift in Sources */,
 				63DDB8B42493E09100271C34 /* SignupViewController.swift in Sources */,
 				63DDB8E32496F2B500271C34 /* AllChatsViewController.swift in Sources */,
+				63DDB9142498E35B00271C34 /* MMDateMessageCellLayout.swift in Sources */,
+				63DDB9132498E35B00271C34 /* UIFont+NoChat.swift in Sources */,
 				63DDB8D424956CDE00271C34 /* AllUsersTableViewCell.swift in Sources */,
 				63DDB8BF2494222A00271C34 /* ChatViewController.swift in Sources */,
+				63DDB9152498E35B00271C34 /* TGChatViewController.swift in Sources */,
 				63DDB8B924941BA000271C34 /* MainViewController.swift in Sources */,
+				63DDB9302498E35B00271C34 /* TGTitleView.swift in Sources */,
 				63DDB8CE24956C8700271C34 /* AllUsersViewController.swift in Sources */,
+				63DDB9292498E35B00271C34 /* ChatsViewController.swift in Sources */,
+				63DDB9222498E35B00271C34 /* MMSystemMessageCellLayout.swift in Sources */,
+				63DDB9282498E35B00271C34 /* MMBaseMessageCellLayout.swift in Sources */,
+				63DDB9202498E35B00271C34 /* MMTextMessageCell.swift in Sources */,
+				63DDB9242498E35B00271C34 /* SoundManager.swift in Sources */,
 				63DDB87E2493DD4A00271C34 /* AppRocketTask.xcdatamodeld in Sources */,
+				63DDB93C2498F8D200271C34 /* ChatsTableViewCell.swift in Sources */,
+				63DDB9262498E35B00271C34 /* Chat.swift in Sources */,
 				63DDB8C924956C4300271C34 /* ChatListViewController.swift in Sources */,
 				63DDB8C624943A8400271C34 /* AppRocketUser.swift in Sources */,
+				63DDB9122498E35B00271C34 /* MMBaseMessageCell.swift in Sources */,
+				63DDB9112498E35B00271C34 /* Message.swift in Sources */,
+				63DDB91E2498E35B00271C34 /* MessageManager.swift in Sources */,
+				63DDB92A2498E35B00271C34 /* TGDeliveryStatusView.swift in Sources */,
+				63DDB9322498E35B00271C34 /* TGClockProgressView.swift in Sources */,
+				63DDB9212498E35B00271C34 /* TGTextMessageCell.swift in Sources */,
+				63DDB9252498E35B00271C34 /* MMSystemMessageCell.swift in Sources */,
+				63DDB9162498E35B00271C34 /* TGBaseMessageCellLayout.swift in Sources */,
+				63DDB91F2498E35B00271C34 /* NSAttributedString+NoChat.swift in Sources */,
+				63DDB92F2498E35B00271C34 /* TGSystemMessageCellLayout.swift in Sources */,
+				63DDB91C2498E35B00271C34 /* MMChatInputTextPanel.swift in Sources */,
 				63DDB8DE2496E64A00271C34 /* WidgetsViewController.swift in Sources */,
+				63DDB91D2498E35B00271C34 /* TGDateMessageCell.swift in Sources */,
 				63DDB8802493DD4A00271C34 /* ContentView.swift in Sources */,
+				63DDB9182498E35B00271C34 /* User.swift in Sources */,
+				63DDB9312498E35B00271C34 /* MMTextMessageCellLayout.swift in Sources */,
+				63DDB9272498E35B00271C34 /* MMDateMessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

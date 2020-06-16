@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         Auth.auth().signIn(withEmail: self.emailTF.text!, password: self.passwordTF.text!) { (result, error) in
             if error == nil{
-                self.present(AllUsersViewController(), animated: false, completion: nil)
+                self.present(WidgetsViewController(), animated: false, completion: nil)
             }
             else{
                 

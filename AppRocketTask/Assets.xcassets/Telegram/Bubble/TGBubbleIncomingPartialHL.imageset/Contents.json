@@ -1,0 +1,73 @@
+{
+  "images" : [
+    {
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ModernBubbleIncomingPartialHighlighted@2x.png",
+      "idiom" : "iphone",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 31,
+          "left" : 37,
+          "right" : 27,
+          "top" : 30
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      },
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "ModernBubbleIncomingPartialHighlightedPad.png",
+      "idiom" : "ipad",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 16,
+          "left" : 19,
+          "right" : 14,
+          "top" : 16
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      },
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ModernBubbleIncomingPartialHighlightedPad@2x.png",
+      "idiom" : "ipad",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 33,
+          "left" : 39,
+          "right" : 40,
+          "top" : 32
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      },
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
