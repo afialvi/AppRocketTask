@@ -12,7 +12,7 @@ import FirebaseStorage
 import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
-
+import Alamofire
 
 extension CLLocation {
 func fetchAddress(completion: @escaping (_ address: String?, _ error: Error?) -> ()) {
@@ -54,7 +54,7 @@ func fetchAddress(completion: @escaping (_ address: String?, _ error: Error?) ->
 }
 
 
-class WidgetsViewController: UIViewController {
+class WidgetsViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var contactName: UILabel!
     @IBOutlet weak var latestMsgLbl: UILabel!
@@ -77,6 +77,8 @@ class WidgetsViewController: UIViewController {
     
     var dbRef: DatabaseReference?
     var allChats:[[String: [Message]]] = [[String: [Message]]]()
+    let CALENDAR_API_KEY = "295328404642-725504bjgdknin7kk2j2v7lg9cga0kct.apps.googleusercontent.com"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,7 +107,7 @@ class WidgetsViewController: UIViewController {
     }
     
     func updateCurrentLocationAndWeather(){
-        let loc = CLLocation()
+        if let loc = getCurrentLocation(){
         loc.fetchAddress(completion: { (address, error) in
             if error == nil{
                 self.locationLbl.text = address
@@ -114,6 +116,11 @@ class WidgetsViewController: UIViewController {
                 self.locationLbl.text = "Location not found"
             }
         })
+        }
+        else{
+             self.locationLbl.text = "Location not found"
+        }
+        self.getWeatherUpdates()
     }
     
     @IBAction func viewChat(_ sender: Any) {
@@ -128,6 +135,8 @@ class WidgetsViewController: UIViewController {
     }
     
     @IBAction func refresh(_ sender: Any) {
+        self.updateCurrentLocationAndWeather()
+        
     }
     @IBAction func viewInbox(_ sender: Any) {
         let allChatsVC = AllChatsViewController()
@@ -135,11 +144,6 @@ class WidgetsViewController: UIViewController {
         self.present(allChatsVC, animated: false, completion: nil)
     }
     
-    func fetchChats(){
-//        self.initializeDBRef()
-//        self.loadChats()
-        
-    }
     
     
     
@@ -221,6 +225,73 @@ class WidgetsViewController: UIViewController {
              
      }
          
+    
+    func getCurrentLocation() -> CLLocation?{
+        var locationManager = CLLocationManager()
+
+        locationManager.requestWhenInUseAuthorization()
+        var currentLoc: CLLocation?
+//        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+//        CLLocationManager.authorizationStatus() == .authorizedAlways) {
+//            locationManager.delegate = self
+//            locationManager.startUpdatingLocation()
+//           currentLoc = locationManager.location
+//           print("Latitude: \(currentLoc.coordinate.latitude)")
+//           print("Longitude: \(currentLoc.coordinate.longitude)")
+//        }
+        return currentLoc
+    }
+    
+    
+    
+    func getWeatherUpdates(){
+        if let currLoc = getCurrentLocation(){
+            let urlStr = "http://api.openweathermap.org/data/2.5/weather?lon=\(currLoc.coordinate.longitude)&lat=\(currLoc.coordinate.latitude)&appid=d07c03ab49c01c1f3dfcd8734acc75b1"
+
+           
+
+
+            NetworkUtils.sendRequest(url: urlStr, method: .get, parameters: nil) { (data, error) in
+                if data == nil{
+                    self.temperatureInDegreeCentigradeLbl.text = "-0C"
+                    self.topValue.text = "-0"
+                    self.bottomValueLbl.text = "-0"
+                }
+                else{
+                    let alamofireData = data as! DataResponse<Any>
+                    let dict = try! JSONSerialization.jsonObject(with: alamofireData.data!, options: []) as! [String: Any]
+                    print("Dict: \(dict)")
+                    let mainDict = dict["main"] as! [String: Any]
+                    let currTemp = self.getCentigradeFromKelvin(temp: Int(mainDict["temp"] as! Double))
+                    self.temperatureInDegreeCentigradeLbl.text = "\(currTemp)C"
+                    
+                    self.topValue.text = self.getCentigradeFromKelvin(temp: Int(mainDict["temp_max"] as! Double))
+                    self.bottomValueLbl.text = self.getCentigradeFromKelvin(temp: Int(mainDict["temp_min"] as! Double))
+                }
+            }
+        }
+        else{
+            self.temperatureInDegreeCentigradeLbl.text = "-0C"
+            self.topValue.text = "-0"
+            self.bottomValueLbl.text = "-0"
+            
+            
+            
+        }
+        
+    }
+    
+    func getCentigradeFromKelvin(temp: Int)->String{
+        let centigradeTemp = temp - 273
+        return String(centigradeTemp)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        if locations.count > 0{
+            
+        }
+    }
+    
     
     
 }

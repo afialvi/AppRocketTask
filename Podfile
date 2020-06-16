@@ -17,6 +17,7 @@ pod 'NoChat', '~> 0.3'
 pod 'YYText'
 pod 'HPGrowingTextView'
 pod 'NOCProtoKit', :path => '../'
+pod 'Alamofire', '~> 4.0'
 
   target 'AppRocketTaskTests' do
     inherit! :search_paths

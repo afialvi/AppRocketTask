@@ -77,6 +77,8 @@
 		63DDB9442499199A00271C34 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB9432499199A00271C34 /* refresh.png */; };
 		63DDB94824991E8300271C34 /* SendBroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB94624991E8300271C34 /* SendBroadcastViewController.swift */; };
 		63DDB94924991E8300271C34 /* SendBroadcastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB94724991E8300271C34 /* SendBroadcastViewController.xib */; };
+		63DDB94C24993AA600271C34 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB94B24993AA600271C34 /* NetworkUtils.swift */; };
+		63DDB94E2499549400271C34 /* weather-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB94D2499549400271C34 /* weather-icon.png */; };
 		75584B6F6EEF5E62C29E3B56 /* Pods_AppRocketTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB98BAADF4C2237CE7915A37 /* Pods_AppRocketTaskUITests.framework */; };
 		CBE9F77E38665FC4C505B9C3 /* Pods_AppRocketTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7FCD30E072C96D6DFBDF77 /* Pods_AppRocketTaskTests.framework */; };
 		F7284B5F0EFAA8548C3B3EB0 /* Pods_AppRocketTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1D48A64824598C56BE20B5 /* Pods_AppRocketTask.framework */; };
@@ -181,6 +183,8 @@
 		63DDB9432499199A00271C34 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		63DDB94624991E8300271C34 /* SendBroadcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendBroadcastViewController.swift; sourceTree = "<group>"; };
 		63DDB94724991E8300271C34 /* SendBroadcastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendBroadcastViewController.xib; sourceTree = "<group>"; };
+		63DDB94B24993AA600271C34 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		63DDB94D2499549400271C34 /* weather-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-icon.png"; sourceTree = "<group>"; };
 		7A1D48A64824598C56BE20B5 /* Pods_AppRocketTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRocketTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB98BAADF4C2237CE7915A37 /* Pods_AppRocketTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRocketTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D693D1C6C8F54B4176475508 /* Pods-AppRocketTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRocketTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-AppRocketTaskTests/Pods-AppRocketTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 		63DDB8772493DD4A00271C34 /* AppRocketTask */ = {
 			isa = PBXGroup;
 			children = (
+				63DDB94A24993A8400271C34 /* Utils */,
 				63DDB93E249918C000271C34 /* Images */,
 				63DDB8E52498E17B00271C34 /* ChatMessageLib */,
 				63DDB8D124956CBF00271C34 /* Cells */,
@@ -445,6 +450,7 @@
 		63DDB93E249918C000271C34 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				63DDB94D2499549400271C34 /* weather-icon.png */,
 				63DDB9432499199A00271C34 /* refresh.png */,
 				63DDB93F249918D000271C34 /* calendar-icon.png */,
 				63DDB9412499192E00271C34 /* location-icon.jpg */,
@@ -459,6 +465,14 @@
 				63DDB94724991E8300271C34 /* SendBroadcastViewController.xib */,
 			);
 			path = SendBroadcast;
+			sourceTree = "<group>";
+		};
+		63DDB94A24993A8400271C34 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				63DDB94B24993AA600271C34 /* NetworkUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9BE4093ABE8E05FA36CD05B6 /* Pods */ = {
@@ -587,6 +601,7 @@
 				63DDB8C324942B8600271C34 /* GoogleService-Info.plist in Resources */,
 				63DDB94924991E8300271C34 /* SendBroadcastViewController.xib in Resources */,
 				63DDB8BA24941BA000271C34 /* MainViewController.xib in Resources */,
+				63DDB94E2499549400271C34 /* weather-icon.png in Resources */,
 				63DDB9422499192E00271C34 /* location-icon.jpg in Resources */,
 				63DDB940249918D000271C34 /* calendar-icon.png in Resources */,
 				63DDB8E42496F2B500271C34 /* AllChatsViewController.xib in Resources */,
@@ -753,6 +768,7 @@
 				63DDB9162498E35B00271C34 /* TGBaseMessageCellLayout.swift in Sources */,
 				63DDB91F2498E35B00271C34 /* NSAttributedString+NoChat.swift in Sources */,
 				63DDB92F2498E35B00271C34 /* TGSystemMessageCellLayout.swift in Sources */,
+				63DDB94C24993AA600271C34 /* NetworkUtils.swift in Sources */,
 				63DDB91C2498E35B00271C34 /* MMChatInputTextPanel.swift in Sources */,
 				63DDB8DE2496E64A00271C34 /* WidgetsViewController.swift in Sources */,
 				63DDB91D2498E35B00271C34 /* TGDateMessageCell.swift in Sources */,
