@@ -125,6 +125,7 @@ class WidgetsViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func viewChat(_ sender: Any) {
         var otherEmail = ""
+        if(self.allChats.count > 0){
         let lastMsg = self.allChats[self.allChats.count - 1]
         for (ki, val) in lastMsg{
              otherEmail = ki
@@ -132,6 +133,7 @@ class WidgetsViewController: UIViewController, CLLocationManagerDelegate {
         let chatVC = ChatViewController(chat: Chat())
         chatVC.receiverUsername = otherEmail
         self.present(chatVC, animated: false, completion: nil)
+        }
     }
     
     @IBAction func refresh(_ sender: Any) {
@@ -208,10 +210,12 @@ class WidgetsViewController: UIViewController, CLLocationManagerDelegate {
                             }
                         
                     }
+                    if(self.allChats.count > 0){
                     let lastMsg = self.allChats[self.allChats.count - 1]
                     for (ki, val) in lastMsg{
                         self.contactName.text = ki
                         self.latestMsgLbl.text = val[val.count - 1].text
+                    }
                     }
                 }
                 else{
