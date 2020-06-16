@@ -72,6 +72,11 @@
 		63DDB9322498E35B00271C34 /* TGClockProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB90F2498E35900271C34 /* TGClockProgressView.swift */; };
 		63DDB93C2498F8D200271C34 /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB93A2498F8D200271C34 /* ChatsTableViewCell.swift */; };
 		63DDB93D2498F8D200271C34 /* ChatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB93B2498F8D200271C34 /* ChatsTableViewCell.xib */; };
+		63DDB940249918D000271C34 /* calendar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB93F249918D000271C34 /* calendar-icon.png */; };
+		63DDB9422499192E00271C34 /* location-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB9412499192E00271C34 /* location-icon.jpg */; };
+		63DDB9442499199A00271C34 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB9432499199A00271C34 /* refresh.png */; };
+		63DDB94824991E8300271C34 /* SendBroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDB94624991E8300271C34 /* SendBroadcastViewController.swift */; };
+		63DDB94924991E8300271C34 /* SendBroadcastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDB94724991E8300271C34 /* SendBroadcastViewController.xib */; };
 		75584B6F6EEF5E62C29E3B56 /* Pods_AppRocketTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB98BAADF4C2237CE7915A37 /* Pods_AppRocketTaskUITests.framework */; };
 		CBE9F77E38665FC4C505B9C3 /* Pods_AppRocketTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7FCD30E072C96D6DFBDF77 /* Pods_AppRocketTaskTests.framework */; };
 		F7284B5F0EFAA8548C3B3EB0 /* Pods_AppRocketTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1D48A64824598C56BE20B5 /* Pods_AppRocketTask.framework */; };
@@ -171,6 +176,11 @@
 		63DDB90F2498E35900271C34 /* TGClockProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGClockProgressView.swift; sourceTree = "<group>"; };
 		63DDB93A2498F8D200271C34 /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
 		63DDB93B2498F8D200271C34 /* ChatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsTableViewCell.xib; sourceTree = "<group>"; };
+		63DDB93F249918D000271C34 /* calendar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-icon.png"; sourceTree = "<group>"; };
+		63DDB9412499192E00271C34 /* location-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "location-icon.jpg"; sourceTree = "<group>"; };
+		63DDB9432499199A00271C34 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		63DDB94624991E8300271C34 /* SendBroadcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendBroadcastViewController.swift; sourceTree = "<group>"; };
+		63DDB94724991E8300271C34 /* SendBroadcastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendBroadcastViewController.xib; sourceTree = "<group>"; };
 		7A1D48A64824598C56BE20B5 /* Pods_AppRocketTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRocketTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB98BAADF4C2237CE7915A37 /* Pods_AppRocketTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRocketTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D693D1C6C8F54B4176475508 /* Pods-AppRocketTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRocketTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-AppRocketTaskTests/Pods-AppRocketTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -241,6 +251,7 @@
 		63DDB8772493DD4A00271C34 /* AppRocketTask */ = {
 			isa = PBXGroup;
 			children = (
+				63DDB93E249918C000271C34 /* Images */,
 				63DDB8E52498E17B00271C34 /* ChatMessageLib */,
 				63DDB8D124956CBF00271C34 /* Cells */,
 				63DDB8C424943A6E00271C34 /* Models */,
@@ -286,6 +297,7 @@
 		63DDB8AB2493DF5E00271C34 /* UIControllers */ = {
 			isa = PBXGroup;
 			children = (
+				63DDB94524991E2D00271C34 /* SendBroadcast */,
 				63DDB8E02496F2A100271C34 /* AllChats */,
 				63DDB8DB2496E60F00271C34 /* Widgets */,
 				63DDB8D6249612CF00271C34 /* CreateGroup */,
@@ -430,6 +442,25 @@
 			path = ChatMessageLib;
 			sourceTree = "<group>";
 		};
+		63DDB93E249918C000271C34 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				63DDB9432499199A00271C34 /* refresh.png */,
+				63DDB93F249918D000271C34 /* calendar-icon.png */,
+				63DDB9412499192E00271C34 /* location-icon.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		63DDB94524991E2D00271C34 /* SendBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				63DDB94624991E8300271C34 /* SendBroadcastViewController.swift */,
+				63DDB94724991E8300271C34 /* SendBroadcastViewController.xib */,
+			);
+			path = SendBroadcast;
+			sourceTree = "<group>";
+		};
 		9BE4093ABE8E05FA36CD05B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,10 +585,14 @@
 				63DDB8AF2493E06900271C34 /* LoginViewController.xib in Resources */,
 				63DDB8CF24956C8700271C34 /* AllUsersViewController.xib in Resources */,
 				63DDB8C324942B8600271C34 /* GoogleService-Info.plist in Resources */,
+				63DDB94924991E8300271C34 /* SendBroadcastViewController.xib in Resources */,
 				63DDB8BA24941BA000271C34 /* MainViewController.xib in Resources */,
+				63DDB9422499192E00271C34 /* location-icon.jpg in Resources */,
+				63DDB940249918D000271C34 /* calendar-icon.png in Resources */,
 				63DDB8E42496F2B500271C34 /* AllChatsViewController.xib in Resources */,
 				63DDB8B52493E09100271C34 /* SignupViewController.xib in Resources */,
 				63DDB8882493DD4E00271C34 /* LaunchScreen.storyboard in Resources */,
+				63DDB9442499199A00271C34 /* refresh.png in Resources */,
 				63DDB8852493DD4E00271C34 /* Preview Assets.xcassets in Resources */,
 				63DDB8D524956CDE00271C34 /* AllUsersTableViewCell.xib in Resources */,
 				63DDB8BC2494201200271C34 /* Podfile in Resources */,
@@ -697,6 +732,7 @@
 				63DDB8B924941BA000271C34 /* MainViewController.swift in Sources */,
 				63DDB9302498E35B00271C34 /* TGTitleView.swift in Sources */,
 				63DDB8CE24956C8700271C34 /* AllUsersViewController.swift in Sources */,
+				63DDB94824991E8300271C34 /* SendBroadcastViewController.swift in Sources */,
 				63DDB9292498E35B00271C34 /* ChatsViewController.swift in Sources */,
 				63DDB9222498E35B00271C34 /* MMSystemMessageCellLayout.swift in Sources */,
 				63DDB9282498E35B00271C34 /* MMBaseMessageCellLayout.swift in Sources */,

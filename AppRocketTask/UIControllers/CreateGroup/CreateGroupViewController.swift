@@ -77,6 +77,9 @@ class CreateGroupViewController: UIViewController, UITableViewDelegate, UITableV
             }
             self.allGroups.append(["name": self.groupNameTF.text!, "participants":participants])
             self.dbRef?.child("Groups").setValue(self.allGroups)
+            let chatVC = ChatViewController(chat: Chat())
+            chatVC.receiverUsername = "Group\(self.groupNameTF.text!)"
+            self.present(chatVC, animated: false, completion: nil)
         }
     }
     

@@ -43,6 +43,9 @@ func fetchAddress(completion: @escaping (_ address: String?, _ error: Error?) ->
         if address.last == "," {
             address = String(address.dropLast())
         }
+        if address.count <= 0{
+            address = "No address found!"
+        }
         completion(address,$1)
        // completion("\($0?.first?.subThoroughfare ?? ""), \($0?.first?.thoroughfare ?? ""), \($0?.first?.locality ?? ""), \($0?.first?.subLocality ?? ""), \($0?.first?.administrativeArea ?? ""), \($0?.first?.postalCode ?? ""), \($0?.first?.country ?? "")",$1)
     }
@@ -77,7 +80,14 @@ class WidgetsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchChats()
+        self.initializeDBRef()
+        self.updateTimeAndCalendarEvent()
+        self.updateCurrentLocationAndWeather()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadChats()
     }
     
     func updateTimeAndCalendarEvent(){
@@ -101,12 +111,20 @@ class WidgetsViewController: UIViewController {
                 self.locationLbl.text = address
             }
             else{
-                
+                self.locationLbl.text = "Location not found"
             }
         })
     }
     
     @IBAction func viewChat(_ sender: Any) {
+        var otherEmail = ""
+        let lastMsg = self.allChats[self.allChats.count - 1]
+        for (ki, val) in lastMsg{
+             otherEmail = ki
+        }
+        let chatVC = ChatViewController(chat: Chat())
+        chatVC.receiverUsername = otherEmail
+        self.present(chatVC, animated: false, completion: nil)
     }
     
     @IBAction func refresh(_ sender: Any) {
@@ -118,10 +136,12 @@ class WidgetsViewController: UIViewController {
     }
     
     func fetchChats(){
-        self.initializeDBRef()
-        self.loadChats()
+//        self.initializeDBRef()
+//        self.loadChats()
         
     }
+    
+    
     
     func initializeDBRef(){
            self.dbRef = Database.database().reference()
@@ -132,6 +152,7 @@ class WidgetsViewController: UIViewController {
      func loadChats(){
         self.dbRef?.child("Chats").observe(.value, with: { (snapshot) in
             if(snapshot.exists()){
+                self.allChats.removeAll()
                 if let chats = snapshot.value as? [String: Any]{
                     for (key, value) in chats{
                             print("Chat key!! \(key)")
@@ -182,6 +203,11 @@ class WidgetsViewController: UIViewController {
                                 }
                             }
                         
+                    }
+                    let lastMsg = self.allChats[self.allChats.count - 1]
+                    for (ki, val) in lastMsg{
+                        self.contactName.text = ki
+                        self.latestMsgLbl.text = val[val.count - 1].text
                     }
                 }
                 else{

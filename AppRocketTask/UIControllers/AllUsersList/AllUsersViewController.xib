@@ -53,6 +53,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZP-Ly-6Q0">
                             <rect key="frame" x="280" y="5" width="109" height="30"/>
                             <state key="normal" title="Send Broadcast"/>
+                            <connections>
+                                <action selector="sendBroadcast:" destination="-1" eventType="touchUpInside" id="scX-w1-8Ae"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

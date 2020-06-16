@@ -114,4 +114,8 @@ class AllUsersViewController: UIViewController, UITableViewDelegate, UITableView
         self.present(cng, animated: false, completion: nil)
     }
     
+    @IBAction func sendBroadcast(_ sender: Any) {
+        let bvc = SendBroadcastViewController()
+        self.present(bvc, animated: false, completion: nil)
+    }
 }
