@@ -240,8 +240,8 @@ class WidgetsViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.startUpdatingLocation()
            currentLoc = locationManager.location
-           print("Latitude: \(currentLoc.coordinate.latitude)")
-           print("Longitude: \(currentLoc.coordinate.longitude)")
+//           print("Latitude: \(currentLoc.coordinate.latitude)")
+//           print("Longitude: \(currentLoc.coordinate.longitude)")
         }
         return currentLoc
     }
